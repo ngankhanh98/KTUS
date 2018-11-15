@@ -4,9 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
 var indexRouter = require('./routes/index');
 var signinRouter = require('./routes/signin');
 var postRouter = require('./routes/post');
+var newpostRouter = require('./routes/new-post');
 
 var app = express();
 
@@ -23,6 +25,7 @@ app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/', indexRouter);
 app.use('/signin', signinRouter);
 app.use('/post/', postRouter);
+app.use('/new-post', newpostRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
