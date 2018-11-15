@@ -6,6 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="images/logo.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <title>KTUS</title>
 
@@ -17,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="stylesheets/index.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,9 +26,7 @@
 <div class="container ">
   <!--Header-->
   <header class="container blog-header py-3 bg-white sticky-top">
-
     <div class="row flex-nowrap justify-content-between align-items-center">
-
       <div class="col-sm pt-1">
         <a class="text-muted" href="#">
           <img src="images/logo_medium.png"/>
@@ -38,7 +38,6 @@
           <span class="input-group-text"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg></a></span>
         </div>
       </div>
-
       <div class="col-3  d-flex justify-content-end align-items-center ">
         <a class="btn btn-outline-primary" href="#" ><span style="font-family:'Segoe UI'">Viết bài</span></a>
         <a class="btn btn-link btn-sm" href="/signin"><span
@@ -47,7 +46,7 @@
 
       </div>
     </div>
-
+    <!--Topics-->
     <div class="sticky-top nav-scroller py-1 mb-2 ">
       <nav class="nav d-flex justify-content-between">
         <a class="p-2 text-muted" href="#">KỸ NĂNG</a>
@@ -61,17 +60,16 @@
         <a class="p-2 text-muted" href="#">DU LỊCH</a>
       </nav>
     </div>
-
   </header>
 
   <main role="main" class="container">
     <div class="row">
-      <aside class="fixed-bottom col-md-1 blog-sidebar">
+      <aside class="fixed-bottom col-md-4 blog-sidebar">
         <div class="p-3 mb-3 rounded">
-          <button type="button" class="btn btn-default btn-lg">
-            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
-          </button>
-          </p>
+          <div class="row-sm"><a href="#"><i class="material-icons md-32 gray ">arrow_drop_up</i></a></div>
+          <div class="row-sm"><span style="font-family: Roboto; align-content: space-between"><b>1202231</b></span></div>
+          <div class="row-sm"><a href="#"><i class="material-icons md-32 gray ">arrow_drop_down</i></a></div>
+          <div class="row-sm"><a href="#"><i class="material-icons md-32 gray ">bookmark</i></a></div>
         </div>
       </aside>
       <div class="col-md-10 blog-main">
