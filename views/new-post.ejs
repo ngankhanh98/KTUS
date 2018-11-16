@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/logo.ico">
+
+    <title>KTUS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="stylesheets/index.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+
+    <!-- Include CSS for icons. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Include Editor style. -->
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.0/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/froala-editor@2.9.0/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+    <header class="blog-header py-1 bg-white">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-sm pt-1">
+                <a class="text-muted" href="..">
+                    <img src="images/logo_medium.png"/>
+                </a>
+            </div>
+            <div class="col-5 input-group">
+                <input type="search" class="form-control" aria-label="">
+                <div class="input-group-append">
+                    <span class="input-group-text"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg></a></span>
+                </div>
+            </div>
+
+            <div class="col-3  d-flex justify-content-end align-items-center ">
+                <a class="btn btn-outline-primary" href="/new-post" ><span style="font-family:'Segoe UI'">Viết bài</span></a>
+                <a class="btn btn-link btn-sm" href="/signin"><span
+                            style="font-family:'Segoe UI'">Đăng nhập</span></a>
+                <a class="btn btn-link btn-sm" href="#"><span style="font-family:'Segoe UI'">Đăng ký</span></a>
+
+            </div>
+        </div>
+
+        <div class="sticky-top nav-scroller py-1 mb-2 ">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 text-muted" href="#">KỸ NĂNG</a>
+                <a class="p-2 text-muted" href="#">KHOA HỌC - CÔNG NGHỆ</a>
+                <a class="p-2 text-muted" href="#">TRUYỀN CẢM HỨNG</a>
+                <a class="p-2 text-muted" href="#">PHIM ẢNH</a>
+                <a class="p-2 text-muted" href="#">ÂM NHẠC</a>
+                <a class="p-2 text-muted" href="#">VĂN HÓA</a>
+                <a class="p-2 text-muted" href="#">CHÍNH TRỊ</a>
+                <a class="p-2 text-muted" href="#">QUAN ĐIỂM - TRANH LUẬN</a>
+                <a class="p-2 text-muted" href="#">DU LỊCH</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div class="edit-post">
+        <div id="froala-editor">
+            <p>This is the full featured editor with the toolbar at the bottom, using the <a href="../docs/options#toolbarBottom" title="toolbarBottom option" target="_blank">toolbarBottom</a> option.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Include jQuery lib. -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@2.9.0/js/froala_editor.pkgd.min.js"></script>
+
+<!-- Initialize the editor. -->
+<script>
+    $(function() {
+        $('div#froala-editor').froalaEditor({
+            toolbarButtons: [ 'bold', 'italic', 'underline', 'strikeThrough', 'fontSize', "|", 'subscript', 'superscript', '|', 'color', '|', 'align', 'outdent', 'indent', '-', 'insertLink',  'quote', 'insertHR', "|",  'undo', 'redo', 'clearFormatting', 'html'],
+            tableResizingLimit: 0
+        })
+    });
+</script>
+</body>
+</html>
