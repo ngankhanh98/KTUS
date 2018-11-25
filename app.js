@@ -11,7 +11,9 @@ var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
 
 var app = express();
-
+// database
+var confi=require('./db/config');
+confi.create_if_null();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
