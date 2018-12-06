@@ -1,12 +1,12 @@
 var mysql = require('mysql');
 var Promise = require('promise');
-
+var config=require('./host')
 var cn = mysql.createConnection({
-    host: 'db4free.net',
-    port: 3306,
-    user: 'kitus_team',
-    password: '22121996',
-    database: 'kitus_team'
+    host: config.host,
+    port: config.port,
+    user: config.user,
+    password: config.password,
+    database: config.database
 });
 
 cn.connect();
