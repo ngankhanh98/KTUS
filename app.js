@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var signinRouter = require('./routes/signin');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
+var signupRouter = require('./routes/signup');
 
 var app = express();
 // database
@@ -28,6 +29,7 @@ app.use('/', indexRouter);
 app.use('/signin', signinRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
+app.use('/signup', signupRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
