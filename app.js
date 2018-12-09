@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var host=require('./db/host')
 
 
 var indexRouter = require('./routes/index');
@@ -11,10 +12,34 @@ var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
 
 var app = express();
+// create session
+var session = require('express-session')
+var MySQLStore = require('express-mysql-session')(session);
+var options = {
+    host: host.host,
+    port: host.port,
+    user: host.user,
+    password: host.password,
+    database: host.database
+};
+var sessionStore = new MySQLStore(options);
+
+app.use(session({
+    key: 'session_cookie_name',
+    secret: 'session_cookie_secret',
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false
+}));
 
 // database
-var createIfNull=require('./db/check_exist_table');
+/*var createIfNull=require('./db/check_exist_table');
 createIfNull.create_if_null();
+*/
+//body parser
+var body=require('body-parser');
+app.use(body.json());
+app.use(body.urlencoded({extended: false}));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

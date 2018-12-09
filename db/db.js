@@ -12,18 +12,28 @@ var cn = mysql.createConnection({
 cn.connect();
 
 exports.load = (sql) => {
+    if(cn.state === 'disconnected'){
+        cn.connect();
+    }
+
     return new Promise((resolve, reject) =>
     {
 
-        cn.query(sql, function(error, rows)
+
+        cn.query(sql, (error, rows)=>
         {
             if (error) {
                 console.log(error);
-                reject(error);
+                 reject(error);
+
             } else {
             	resolve(rows);
             }
+
         });
 
+
+
     });
+
 }

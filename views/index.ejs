@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns:margin-right="http://www.w3.org/1999/xhtml" xmlns:margin-left="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,9 +40,15 @@
 
       <div class="col-3  d-flex justify-content-end align-items-center ">
         <a class="btn btn-outline-primary" href="/new-post" ><span style="font-family:'Segoe UI'">Viết bài</span></a>
+        <% if (isLogin) {%>
+        <img src=<%=user.avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px"/>
+        <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=user.name%></span></a>
+        <% } else {%>
+
         <a class="btn btn-link btn-sm" href="./account/signin"><span
                   style="font-family:'Segoe UI'">Đăng nhập</span></a>
         <a class="btn btn-link btn-sm" href="#"><span style="font-family:'Segoe UI'">Đăng ký</span></a>
+        <% } %>
 
       </div>
     </div>

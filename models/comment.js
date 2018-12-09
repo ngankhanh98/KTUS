@@ -6,5 +6,5 @@ module.exports.create_table=() =>
         "comment varchar(400), "+
         "FOREIGN KEY (id_user) REFERENCES user(id_user), "+
         "FOREIGN KEY (id_post) REFERENCES post(id_post) ";
-    db.load('create table if not exists comment ( '+model+')');
+    db.load('create table if not exists comments ( '+model+')');
 }
