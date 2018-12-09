@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,19 +24,22 @@
 <body class="text-center">
 <form class="form-signin">
     <a href=".."> <img class="mb-4" src="images/logo.png" alt="" width="150" height="auto"></a>
-    <label for="inputEmail" class="sr-only">Email address</label>
+    <label for="inputEmail" class="sr-only">Email</label>
     <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
+    <label for="inputPassword" class="sr-only">Mật khẩu</label>
     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+
     </div>
-    <button class="btn btn-primary" type="submit">Sign in</button>
-    <div class="g-signin2 btn" data-onsuccess="onSignIn"></div>
+    <button class="btn btn-block btn-primary" type="submit">Đăng nhập</button>
+    <p class="mt-5 text-left text-muted">Hoặc</p>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-width="300" data-height="40"></div>
+    <br>
+    <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
+    <p class="mt-3 text-left text-muted">Chưa có tài khoản? <a href="../signup">Đăng ký</a> </p>
+
 </form>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 <script>
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
@@ -44,7 +48,26 @@
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
     }
+    function renderButton() {
+        gapi.signin2.render('g-signin2', {
+            'scope': 'profile email',
+            'width': 240,
+            'height': 50,
+            'longtitle': true,
+            'theme': 'dark',
+            'onsuccess': onSuccess,
+            'onfailure': onFailure
+        });
+    }
 </script>
+
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=618189491929805&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 </body>
 </html>
 
