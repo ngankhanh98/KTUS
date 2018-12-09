@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const PORT = process.env.PORT || 5000;
 
 var indexRouter = require('./routes/index');
 var signinRouter = require('./routes/signin');
@@ -13,7 +13,7 @@ var signupRouter = require('./routes/signup');
 
 var app = express();
 // database
-var confi=require('./db/config');
+var confi = require('./db/config');
 confi.create_if_null();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -46,5 +46,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.listen(PORT, () => console.log('Listening on ${PORT}'));
 
 module.exports = app;
