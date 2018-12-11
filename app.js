@@ -3,14 +3,14 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 var indexRouter = require('./routes/index');
 var signinRouter = require('./routes/signin');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
 var signupRouter = require('./routes/signup');
-
+var dashboardRouter = require('./routes/dashboard');
 var app = express();
 // database
 var confi = require('./db/config');
@@ -30,6 +30,7 @@ app.use('/signin', signinRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
 app.use('/signup', signupRouter);
+app.use('/dashboard', dashboardRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -47,6 +48,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// app.listen(PORT, () => console.log('Listening on ${PORT}'));
+app.listen(PORT, () => console.log('Listening on ${PORT}'));
 
 module.exports = app;
