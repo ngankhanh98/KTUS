@@ -6,15 +6,42 @@ var logger = require('morgan');
 // const PORT = process.env.PORT || 5000;
 
 var indexRouter = require('./routes/index');
-var signinRouter = require('./routes/signin');
+var userRouter = require('./routes/user');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
-var signupRouter = require('./routes/signup');
+var host=require('./db/config');
+
 
 var app = express();
+var session = require('express-session')
+var MySQLStore = require('express-mysql-session')(session);
+var options = {
+    host: host.host.host,
+    port: host.host.port,
+    user: host.host.user,
+    password: host.host.password,
+    database: host.host.database
+};
+var sessionStore = new MySQLStore(options);
+
+app.use(session({
+    key: 'session_cookie_name',
+    secret: 'session_cookie_secret',
+    store: sessionStore,
+    resave: false,
+    saveUninitialized: false
+}));
+
+
+
+
+var path = require('path');
+var body = require('body-parser');
+app.use(body.json());
+app.use(body.urlencoded({extended:false}));
 // database
-var confi = require('./db/config');
-confi.create_if_null();
+/*var confi = require('./db/config');
+confi.create_if_null();*/
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -26,10 +53,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/', indexRouter);
-app.use('/signin', signinRouter);
+app.use('/account', userRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
-app.use('/signup', signupRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
