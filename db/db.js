@@ -1,39 +1,29 @@
 var mysql = require('mysql');
 var Promise = require('promise');
-var config=require('./host')
+
 var cn = mysql.createConnection({
-    host: config.host,
-    port: config.port,
-    user: config.user,
-    password: config.password,
-    database: config.database
+    host: 'db4free.net',
+    port: 3306,
+    user: 'kitus_team',
+    password: '22121996',
+    database: 'kitus_team'
 });
 
 cn.connect();
 
 exports.load = (sql) => {
-    if(cn.state === 'disconnected'){
-        cn.connect();
-    }
-
     return new Promise((resolve, reject) =>
     {
 
-
-        cn.query(sql, (error, rows)=>
+        cn.query(sql, function(error, rows)
         {
             if (error) {
                 console.log(error);
-                 reject(error);
-
+                reject(error);
             } else {
             	resolve(rows);
             }
-
         });
 
-
-
     });
-
 }

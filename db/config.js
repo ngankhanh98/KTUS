@@ -12,9 +12,9 @@ module.exports.create_if_null= async ()=> {
         await follow.create_table();
         var like = require('../models/likes.js');
         await like.create_table();
-        var share =  require('../models/share.js');
+        var share =  require('../models/shares.js');
         await share.create_table();
-        var comment =  require('../models/comment.js');
+        var comment =  require('../models/comments.js');
         await comment.create_table();
         Promise.resolve(console.log('Database init success!'))
     } catch (e) {
