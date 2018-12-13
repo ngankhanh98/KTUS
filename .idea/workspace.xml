@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
 
       <change afterPath="$PROJECT_DIR$/controllers/user.js" afterDir="false" />
@@ -21,6 +22,7 @@
       <change beforePath="$PROJECT_DIR$/views/signup.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/signup.ejs" afterDir="false" />
 
     </list>
+
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -193,11 +195,19 @@
           <entry key="PLAIN_TEXT" value="28" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+
 
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
@@ -230,6 +240,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+
             </state>
           </provider>
         </entry>
@@ -269,6 +280,7 @@
             <state relative-caret-position="96">
               <caret line="117" column="17" selection-start-line="117" selection-start-column="17" selection-end-line="117" selection-end-column="17" />
 
+
             </state>
           </provider>
         </entry>
@@ -279,6 +291,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+
 
             </state>
           </provider>
@@ -385,6 +398,7 @@
 
   <component name="ProjectFrameBounds" extendedState="6">
 
+
     <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
@@ -407,7 +421,9 @@
               <item name="KTUS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KTUS" type="462c0819:PsiDirectoryNode" />
 
+
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
+
             </path>
             <path>
               <item name="KTUS" type="b2602c69:ProjectViewProjectNode" />
@@ -425,18 +441,21 @@
               <item name="KTUS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KTUS" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+
               <item name="script" type="462c0819:PsiDirectoryNode" />
+
             </path>
             <path>
               <item name="KTUS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KTUS" type="462c0819:PsiDirectoryNode" />
-
               <item name="routes" type="462c0819:PsiDirectoryNode" />
 
             </path>
             <path>
               <item name="KTUS" type="b2602c69:ProjectViewProjectNode" />
               <item name="KTUS" type="462c0819:PsiDirectoryNode" />
+
+
 
 
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -524,6 +543,7 @@
       <workItem from="1542860951909" duration="831000" />
       <workItem from="1542892086426" duration="690000" />
       <workItem from="1543664771558" duration="75000" />
+      <workItem from="1544451615079" duration="53000" />
     </task>
     <task id="LOCAL-00001" summary="Obtain sign in with Google">
       <created>1542121237321</created>
@@ -614,7 +634,9 @@
   </component>
   <component name="TimeTrackingManager">
 
+
     <option name="totallyTimeSpent" value="68278000" />
+
 
   </component>
   <component name="TodoView">
@@ -627,11 +649,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
 
+
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.09375" />
+
 
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.502439" side_tool="true" weight="0.25" />
@@ -639,7 +662,9 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
 
+
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.48360655" />
+
 
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -649,7 +674,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.3289689" />
 
+
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.41311476" />
+
 
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -696,6 +723,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="Signup done" />
   </component>
   <component name="editorHistoryManager">
+
+
 
     <entry file="file://$PROJECT_DIR$/node_modules/quill/dist/quill.core.css" />
     <entry file="file://$PROJECT_DIR$/node_modules/quill/dist/quill.core.js" />
@@ -805,6 +834,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/routes/new-post.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -822,6 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/signin.js">
 
+
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="8" selection-end-column="24" />
@@ -835,6 +866,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/db/create_if_null.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -886,6 +918,7 @@
       </provider>
     </entry>
 
+
     <entry file="file://$PROJECT_DIR$/views/signin.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -894,6 +927,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/views/signup.ejs">
       <provider selected="true" editor-type-id="text-editor">
 
@@ -916,6 +950,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/user.js">
+
       <provider selected="true" editor-type-id="text-editor">
 
         <state>
@@ -966,6 +1001,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/error.ejs">
+
       <provider selected="true" editor-type-id="text-editor">
 
         <state relative-caret-position="204">
@@ -992,6 +1028,27 @@
         <state relative-caret-position="119">
           <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
 
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/error.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="55" lean-forward="true" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
         </state>
       </provider>
     </entry>
