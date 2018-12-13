@@ -9,7 +9,9 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
+
 var host=require('./db/config');
+
 
 
 var app = express();
@@ -40,8 +42,10 @@ var body = require('body-parser');
 app.use(body.json());
 app.use(body.urlencoded({extended:false}));
 // database
+
 /*var confi = require('./db/config');
 confi.create_if_null();*/
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -56,6 +60,7 @@ app.use('/', indexRouter);
 app.use('/account', userRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
+app.use('/signup', signupRouter);
 
 
 // catch 404 and forward to error handler
