@@ -1,15 +1,21 @@
-
-
 body {
   /*padding: 50px;*/
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-.edit-post
-{
-  font-family: "Noto Serif";
+.edit-post {
+  font-family: 'Noto Serif';
+}
+
+.no-border {
+  border: 0;
+  box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+}
+
+.sharp {
+  border-radius: 24px;
 }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="images/logo.ico">
+  <link rel="icon" href="/images/logo.ico">
 
   <title>KTUS</title>
 
@@ -16,7 +16,9 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link href="stylesheets/index.css" rel="stylesheet">
+
+  <link href="/stylesheets/index.css" rel="stylesheet"/>
+  <link href="/stylesheets/style.css" rel="stylesheet"/>
 
   <meta name="google-site-verification" content="2hK8OAg4_EJ1e60F9ibqjmNTLJUhPRC4JVokOTb5cGk" />
 </head>
@@ -29,7 +31,7 @@
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-sm pt-1">
         <a class="text-muted" href="#">
-          <img src="images/logo_medium.png"/>
+          <img src="/images/logo_medium.png"/>
         </a>
       </div>
       <div class="col-5 input-group">
@@ -40,10 +42,18 @@
       </div>
 
       <div class="col-3  d-flex justify-content-end align-items-center ">
-        <a class="btn btn-outline-primary" href="/new-post" ><span style="font-family:'Segoe UI'">Viết bài</span></a>
-        <a class="btn btn-link btn-sm" href="/signin"><span
-                  style="font-family:'Segoe UI'">Đăng nhập</span></a>
-        <a class="btn btn-link btn-sm" href="#"><span style="font-family:'Segoe UI'">Đăng ký</span></a>
+        <a class="btn btn-outline-primary sharp" href="/new-post" ><span style="font-family:'Segoe UI'">Viết bài</span></a>
+
+        <% if (isLogin) {%>
+        <img src=<%=avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px"/>
+        <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=name%></span></a>
+        <% } else {%>
+
+          <a class="btn btn-link btn-sm" href="/account/signin"><span
+                    style="font-family:'Segoe UI'">Đăng nhập</span></a>
+          <a class="btn btn-link btn-sm" href="/account/signup"><span style="font-family:'Segoe UI'" >Đăng ký</span></a>
+        <% } %>
+
 
       </div>
     </div>
