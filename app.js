@@ -60,7 +60,7 @@ app.use('/', indexRouter);
 app.use('/account', userRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
-app.use('/signup', signupRouter);
+
 
 
 // catch 404 and forward to error handler
