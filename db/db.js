@@ -12,15 +12,8 @@ var cn = mysql.createConnection({
 
 cn.connect();
 
-exports.load = (sql,res) => {
-    if(cn.state === 'disconnected'){
-        cn.connect();
-        if(cn.state === 'disconnected')
-        {
-            console.log("Cant't connect to database")
-            res.send("Cant't connect to database")
-        }
-    }
+exports.load = (sql) => {
+
 
 
     return new Promise((resolve, reject) =>
@@ -30,8 +23,6 @@ exports.load = (sql,res) => {
         {
             if (error) {
                 console.log(error);
-                console.log(sql);
-                res.send('Fail!');
                 reject(error);
 
             } else {
