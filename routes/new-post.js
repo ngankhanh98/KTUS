@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var control=require('../controllers/post');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('new-post');
-});
+router.get('/',control.getform);
+router.post('/',control.post);
 
 module.exports = router;
