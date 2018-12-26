@@ -93,8 +93,15 @@
           </div>
 
           <div class="col-3  d-flex justify-content-end align-items-center ">
-            <img src=<%=avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px"/>
-            <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=name%></span></a>
+            <a class="btn btn-outline-primary sharp" href="/new-post"
+              ><span style="font-family:'Segoe UI'">Viết bài</span></a
+            >
+            <a class="btn btn-link btn-sm" href="/signin"
+              ><span style="font-family:'Segoe UI'">Đăng nhập</span></a
+            >
+            <a class="btn btn-link btn-sm" href="#"
+              ><span style="font-family:'Segoe UI'">Đăng ký</span></a
+            >
           </div>
         </div>
 
@@ -117,7 +124,6 @@
         class="form-control-lg form-control no-border"
         type="text"
         placeholder="Your headline..."
-        id="header"
       />
       <div class="custom-theme fr-box fr-basic fr-top">
         <div id="froala-editor"><p></p></div>
@@ -125,14 +131,12 @@
       <button
         type="button"
         class="mt-5 float-right btn btn-outline-primary sharp"
-        onclick="post()"
       >
         Đăng bài
       </button>
     </div>
 
     <!-- Include jQuery lib. -->
-
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"
@@ -148,7 +152,6 @@
     <script>
       $(function() {
         $('div#froala-editor').froalaEditor({
-            imageUploadURL: 'image_upload',
           toolbarButtons: [
             'bold',
             'italic',
@@ -170,23 +173,7 @@
           tableResizingLimit: 0,
           placeholderText: 'Nội dung...',
         });
-
       });
-
-      function post() {
-          var html =  $('div#froala-editor').froalaEditor('html.get') ;
-          var data={
-              "content":$('div#froala-editor').froalaEditor('html.get'),
-              "header":document.getElementById("header").value
-
-          }
-          var xmlhttp = new XMLHttpRequest();
-          xmlhttp.open("POST", "/new-post");
-          xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-          xmlhttp.send(JSON.stringify(data));
-          window.open('/','_self');
-
-      }
     </script>
   </body>
 </html>
