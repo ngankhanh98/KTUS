@@ -111,16 +111,14 @@
         <div class="row-4 col-md-10 blog-main">
           <br />
           <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
+            <h2 class="blog-post-title"><%=title%></h2>
             <p class="blog-post-meta">
               January 1, 2014 by <a href="#">Mark</a>
             </p>
 
-            <p>
-              This blog post shows a few different types of content that's
-              supported and styled with Bootstrap. Basic typography, images, and
-              code are all supported.
-            </p>
+
+             <%-content%>
+
             <hr />
             <p>
               Cum sociis natoque penatibus et magnis
@@ -229,7 +227,7 @@
               target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
               class="fb-xfbml-parse-ignore"
-              ><img src="images/button_fb_share.png"
+              ><img src="/images/button_fb_share.png"
             /></a>
           </div>
         </div>

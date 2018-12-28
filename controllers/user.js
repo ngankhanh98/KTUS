@@ -5,6 +5,7 @@ var user=require('../models/user');
 module.exports.getSignUp= (req,res)=>
 {
     res.render('signup');
+    res.end();
 };
     //post
 module.exports.signUp=user.signUp;
@@ -15,7 +16,8 @@ module.exports.signUp=user.signUp;
 module.exports.getSignIn= (req,res)=>
 {
     res.render('signin');
+    res.end();
 }
     //post
-module.exports.signIn=user.signIn;
+module.exports.signIn=user.signin;
 
