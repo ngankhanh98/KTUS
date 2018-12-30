@@ -24,7 +24,9 @@
     <title>KTUS</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
     <!-- Custom styles for this template -->
     <link
@@ -39,9 +41,9 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
-    <link href="stylesheets/index.css" rel="stylesheet" />
-    <link href="stylesheets/like.css" rel="stylesheet" />
-    <link href="stylesheets/style.css" rel="stylesheet" />
+    <link href="/stylesheets/index.css" rel="stylesheet" />
+    <link href="/stylesheets/like.css" rel="stylesheet" />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -51,7 +53,7 @@
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-sm pt-1">
             <a class="text-muted" href="..">
-              <img src="images/logo_medium.png" />
+              <img src="/images/logo_medium.png" />
             </a>
           </div>
           <div class="col-5 input-group">
@@ -81,14 +83,18 @@
             <a class="btn btn-outline-primary sharp" href="/new-post"
               ><span style="font-family:'Segoe UI'">Viết bài</span></a
             >
-
-            <a class="btn btn-link btn-sm" href="/account/signin"
-              ><span style="font-family:'Segoe UI'">Đăng nhập</span></a
-            >
-            <a class="btn btn-link btn-sm" href="/account/signup"
-
-              ><span style="font-family:'Segoe UI'">Đăng ký</span></a
-            >
+            <% if (isLogin) {%>
+              <img src=<%=avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px" />
+              <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=name%></span></a>
+              <a class="btn btn-link btn-sm" href="/logout"><span
+                style="font-family:'Segoe UI'">Đăng Xuất</span></a>
+              
+              <% } else {%>
+      
+                <a class="btn btn-link btn-sm" href="/signin"><span
+                          style="font-family:'Segoe UI'">Đăng nhập</span></a>
+                <a class="btn btn-link btn-sm" href="/signup"><span style="font-family:'Segoe UI'" >Đăng ký</span></a>
+              <% } %>
           </div>
         </div>
 
@@ -106,28 +112,25 @@
           </nav>
         </div>
       </header>
-
-      <main role="main" class="container">
+<!-- content post -->
+      <main role="main" class="container" >
         <div class="row-4 col-md-10 blog-main">
           <br />
           <div class="blog-post">
             <h2 class="blog-post-title"><%=title%></h2>
-            <p class="blog-post-meta">
-              January 1, 2014 by <a href="#">Mark</a>
+            <p class="blog-post-meta" style="text-transform: capitalize">
+              <%=time%> by <a href="#"><%=name%></a>
             </p>
 
 
-             <%-content%>
+             
 
             <hr />
             <p>
-              Cum sociis natoque penatibus et magnis
-              <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
-              Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
-              vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-              consectetur purus sit amet fermentum.
+              <%-content%>
             </p>
-            <blockquote>
+            <!--
+               <blockquote>
               <p>
                 Curabitur blandit tempus porttitor.
                 <strong>Nullam quis risus eget urna mollis</strong> ornare vel
@@ -191,7 +194,10 @@
               Cras mattis consectetur purus sit amet fermentum. Sed posuere
               consectetur est at lobortis.
             </p>
+            -->
+           
           </div>
+         
           <!-- /.blog-post -->
         </div>
         <!-- /.blog-main -->
@@ -257,7 +263,7 @@
       })(document, 'script', 'facebook-jssdk');
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mo-js/0.288.1/mo.min.js"></script>
-    <script src="script/like.js"></script>
+    <script src="/script/like.js"></script>
     <script src="https://cdn.commento.io/js/commento.js"></script>
   </body>
 </html>

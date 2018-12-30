@@ -1,50 +1,82 @@
-var db=require('../db/db.js');
-var bcrypt=require('bcrypt-nodejs');
 
+var db=require('./db');
+var bcrypt = require('bcrypt-nodejs');
 
-
-// login
-var login={
-    signin:(req, res)=>
+var user={
+    login:(email,password)=>
     {
 
-console.log(req.body.email);
-
-        let sql="select name,id_user,id_role,avatar,password "+
-            "from user "+
-            "where name = '"+req.body.email+"'";
-      db.load(sql).then( (result)=>{
-            if(result.length>0)
-            {
-                if(bcrypt.compareSync(req.body.password,result[0].password)) {
-                        req.session.name = result[0].name,
-                        req.session.id_role = result[0].id_role,
-                        req.session.avatar = result[0].avatar,
-                        req.session.isLogin = true;
-                    res.redirect('/');
+       return new Promise((resolve,reject)=>
+       {
+          let query=`select id_user,username, avatar,password from user where email='${email}'`;
+        
+          db.query(query,(err,result)=>
+          {
+              if(err)
+              {
+                  
+                  resolve(false)
+              }
+              else
+              {
+                if(bcrypt.compareSync(password,result[0].password)&&result.length>0) {
+                    
+                    resolve(result[0]);
                 }
-
-
-
-            }
-
-        });
-
-
-
-
+                else
+                {
+                    resolve(false);
+                }
+              }
+          })
+       });
     },
-    signUp:(req,res)=>
+    signUp:(username,email,password)=>
     {
-        let hash_pass=bcrypt.hashSync(req.body.password);
+        return new Promise((resolve,reject)=>
+        {
+            let search_query=`select id_user from user where email='${email}'`;
+            db.query(search_query,(err,result)=>{
+                if(err)
+                {
+                    console.log("search err");
+                    console.log(err);
+                    resolve(-1);
+                }
+                else
+                {
+                    if(result.length>0)
+                    {
+                        console.log("search");
+                        resolve(false);   
+                    }
+                    else
+                    {
+                        let hash_pass=bcrypt.hashSync(password);
+                        var sql = `insert into user(username,email,password,id_role) values ('${username}','${email}','${hash_pass}',2)`;
+                        db.query(sql,(err) =>{
+                            if(err)
+                            {
+                                console.log(err);
+                                resolve(-1);
+                            }
+                            else
+                            {   
+                                
+                                resolve(true);
+                            }
+                        });
+                    }
+                    
+                }
+            });
+                
+                    
 
-        var sql = "insert into user(name,password,id_role) values(N'"+req.body.email+"',N'"+hash_pass+"',2)";
-        db.load(sql).then((rows) =>
-            {
-                res.redirect('/');
-            }
-        );
-    }
+        
+        });
+        
+    },
 }
-module.exports=login;
 
+module.exports=user;
