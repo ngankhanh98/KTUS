@@ -17,7 +17,9 @@
     <title>KTUS</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
     <!-- Custom styles for this template -->
     <link
@@ -58,6 +60,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    
   </head>
 
   <body>
@@ -93,15 +96,10 @@
           </div>
 
           <div class="col-3  d-flex justify-content-end align-items-center ">
-            <a class="btn btn-outline-primary sharp" href="/new-post"
-              ><span style="font-family:'Segoe UI'">Viết bài</span></a
-            >
-            <a class="btn btn-link btn-sm" href="/signin"
-              ><span style="font-family:'Segoe UI'">Đăng nhập</span></a
-            >
-            <a class="btn btn-link btn-sm" href="#"
-              ><span style="font-family:'Segoe UI'">Đăng ký</span></a
-            >
+            <img src=<%=avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px"/>
+            <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=name%></span></a>
+            <a class="btn btn-link btn-sm" href="/logout"><span
+              style="font-family:'Segoe UI'">Đăng Xuất</span></a>
           </div>
         </div>
 
@@ -123,7 +121,9 @@
       <input
         class="form-control-lg form-control no-border"
         type="text"
-        placeholder="Your headline..."
+        placeholder="Tiêu Đề..."
+        id="header"
+        
       />
       <div class="custom-theme fr-box fr-basic fr-top">
         <div id="froala-editor"><p></p></div>
@@ -131,16 +131,22 @@
       <button
         type="button"
         class="mt-5 float-right btn btn-outline-primary sharp"
+        onclick="post()"
       >
         Đăng bài
       </button>
     </div>
 
     <!-- Include jQuery lib. -->
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     ></script>
+    -->
+    
 
     <!-- Include Editor JS files. -->
     <script
@@ -150,8 +156,14 @@
 
     <!-- Initialize the editor. -->
     <script>
-      $(function() {
-        $('div#froala-editor').froalaEditor({
+      $(function() 
+      {
+        
+        
+        $('div#froala-editor').froalaEditor(
+          {
+            imageUploadURL: '/image_upload',
+           
           toolbarButtons: [
             'bold',
             'italic',
@@ -172,8 +184,38 @@
           ],
           tableResizingLimit: 0,
           placeholderText: 'Nội dung...',
+          
         });
       });
+
+      function post() {
+        if(document.getElementById("header").value.length<1||$('div#froala-editor').froalaEditor('html.get').length<1)
+        {
+          alert('Vui lòng nhập đủ nội dung (tiêu đề, nội dung)');
+        }
+        else{
+          $.ajax({
+        url: '/new-post',
+        type: 'POST',
+        cache: false,
+        data: { content: $('div#froala-editor').froalaEditor('html.get'),title:document.getElementById("header").value},
+        success: function (e) 
+        {
+            if (e.status === -1) {
+                
+              alert(e.message);
+                location.reload(false); 
+              
+            }
+            else {
+              location.href =('/post/'+e.message);
+            }
+        }
+    });
+  }  
+          
+
+      }
     </script>
   </body>
 </html>
