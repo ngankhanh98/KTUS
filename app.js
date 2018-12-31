@@ -9,7 +9,8 @@ var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
 var postRouter = require('./routes/post');
 var newpostRouter = require('./routes/new-post');
-var admindashboardRouter = require('./routes/admindashboard')
+var admindashboardRouter = require('./routes/admindashboard');
+var admindashboardpostsRouter = require('./routes/admindashboard-posts');
 
 var host=require('./db/config');
 
@@ -62,6 +63,7 @@ app.use('/account', userRouter);
 app.use('/post/', postRouter);
 app.use('/new-post', newpostRouter);
 app.use('/admindashboard', admindashboardRouter);
+app.use('/admindashboard-posts', admindashboardpostsRouter);
 
 
 // catch 404 and forward to error handler
