@@ -5,8 +5,9 @@ var fs=require('fs');
 var body = require('body-parser');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var host=require('./config/host')
-var session = require('express-session')
+
+var host=require('./config/host');
+var session = require('express-session');
 var MySQLStore = require('express-mysql-session')(session);
 var options = {
     host: host.host,

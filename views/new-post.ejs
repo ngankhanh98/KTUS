@@ -129,8 +129,10 @@
         <div id="froala-editor"><p></p></div>
       </div>
       <button
+      id="button"
         type="button"
         class="mt-5 float-right btn btn-outline-primary sharp"
+        
         onclick="post()"
       >
         Đăng bài
@@ -155,6 +157,7 @@
     ></script>
 
     <!-- Initialize the editor. -->
+    
     <script>
       $(function() 
       {
@@ -188,7 +191,11 @@
         });
       });
 
+      
+
       function post() {
+        document.getElementById("header").style('background')='#96abb6';
+        
         if(document.getElementById("header").value.length<1||$('div#froala-editor').froalaEditor('html.get').length<1)
         {
           alert('Vui lòng nhập đủ nội dung (tiêu đề, nội dung)');
@@ -205,6 +212,7 @@
                 
               alert(e.message);
                 location.reload(false); 
+                document.getElementById("header").style('background')='white';
               
             }
             else {
@@ -216,6 +224,31 @@
           
 
       }
+    </script>
+    <script>
+      $(function() {
+        // Catch the image being removed.
+        $('div#froala-editor').on('froalaEditor.image.removed', function (e, editor, $img) {
+          $.ajax({
+            // Request method.
+            method: 'POST',
+     
+            // Request URL.
+            url: '/delete_image',
+     
+            // Request params.
+            data: {
+              src: $img.attr('src')
+            }
+          })
+          .done (function (data) {
+            console.log ('Image was deleted');
+          })
+          .fail (function (err) {
+            console.log ('Image delete problem: ' + JSON.stringify(err));
+          })
+        });
+      });
     </script>
   </body>
 </html>

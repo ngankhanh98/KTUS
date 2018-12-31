@@ -24,4 +24,6 @@ router.post('/signup',userController.signup);
 router.get('/logout',userController.logout);
 //image upload
 router.post('/image_upload',imageController.upload);
+//image remove
+router.post('/delete_image',imageController.remove);
 module.exports = router;
