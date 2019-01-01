@@ -194,7 +194,6 @@
       
 
       function post() {
-        document.getElementById("header").style('background')='#96abb6';
         
         if(document.getElementById("header").value.length<1||$('div#froala-editor').froalaEditor('html.get').length<1)
         {
@@ -212,7 +211,7 @@
                 
               alert(e.message);
                 location.reload(false); 
-                document.getElementById("header").style('background')='white';
+                
               
             }
             else {
