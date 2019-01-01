@@ -1,11 +1,33 @@
 var db=require('./db')
 var post={
-    //srear title
-    search:async (title)=>{
+    //search hot chua xu li
+    searchHot:async ()=>{
+        return new Promise((resolve,reject)=>{
+            let sql=`select * 
+            from post  
+            where title like %'${title}'%`;
+            db.query(sql,(err,result)=>
+            {
+                if(err)
+                {
+                    console.log(err);
+                    resolve(-1);
+                }
+                else{
+                    if(result.length>0)
+                        resolve(result[0]);
+                    else
+                        resolve(0);
+                }
+            }) ;   
+        });
+    },
+    //search title
+    searchTitle:async (title)=>{
         return new Promise((resolve,reject)=>{
             let sql=`select id_post 
             from post  
-            where title like'${title}'`;
+            where title like %'${title}'%`;
             db.query(sql,(err,result)=>
             {
                 if(err)

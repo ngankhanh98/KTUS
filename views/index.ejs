@@ -37,9 +37,12 @@
         </a>
       </div>
       <div class="col-5 input-group">
-        <input type="search" class="form-control" aria-label="">
+        <input type="search" class="form-control" aria-label="" placeholder="Search Title" id="seachtitle">
         <div class="input-group-append">
-          <span class="input-group-text"><a class="text-muted" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg></a></span>
+          <button type="button" onclick="search()">
+             search
+          </button> 
+        
         </div>
       </div>
 
@@ -145,5 +148,33 @@
 <script src="../node_modules/holderjs/holder.min.js"></script>
 -->
 <script src="http://imsky.github.com/holder/holder.js"></script>
+
+<!--Search function-->
+<script>
+  function search(){
+    $.ajax({
+        url: '/seach/title',
+        type: 'get',
+        cache: false,
+        data: { title:document.getElementById("searchtitle").value},
+        success: function (e) 
+        {
+            if (e.status === -1) {
+                
+              alert(e.message);
+              
+            }
+            else {
+                  if(e.status===0)
+                    alert(e.message)
+                  else
+                    {
+                      alert(e.data);
+                    }
+            }
+        }
+    });
+  }
+</script>
 </body>
 </html>

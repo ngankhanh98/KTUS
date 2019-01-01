@@ -7,6 +7,7 @@ var home={
             avatar:req.session.avatar
         }
         res.render('index',info);
-    }
+    },
+    
 }
 module.exports=home

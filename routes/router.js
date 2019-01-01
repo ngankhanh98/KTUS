@@ -14,6 +14,8 @@ router.post('/new-post',postController.post);
     // get post
 //router.post('/post',postController.getPost);
 router.get('/post/:id',postController.getPost);
+//search
+router.get('/search/title/:title',postController.searchTitle);
 
 //sign in
 router.get('/signin',userController.getLogin);
@@ -26,4 +28,15 @@ router.get('/logout',userController.logout);
 router.post('/image_upload',imageController.upload);
 //image remove
 router.post('/delete_image',imageController.remove);
+
+//dashboard
+router.get('/dashboard',(req,res)=>{
+    res.render('admindashboard-users');
+});
+router.get('/dashboard1',(req,res)=>{
+    res.render('admindashboard-posts');
+});
+router.get('/dashboard2',(req,res)=>{
+    res.render('admindashboard');
+});
 module.exports = router;
