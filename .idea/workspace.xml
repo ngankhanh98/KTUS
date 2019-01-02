@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admindashboard-posts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard-posts.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admindashboard-users.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard-users.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admindashboard.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,17 +30,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admindashboard-users.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="79" column="10" lean-forward="true" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admindashboard-posts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" selection-start-column="33" selection-end-column="33" />
+            <state relative-caret-position="471">
+              <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#a#2;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="74" column="513" selection-start-line="74" selection-start-column="513" selection-end-line="74" selection-end-column="513" />
+            <state relative-caret-position="842">
+              <caret line="122" column="14" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -55,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/admindashboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="52" selection-start-line="52" selection-end-line="77" selection-end-column="6" />
+            <state relative-caret-position="-8">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -167,8 +163,8 @@
         <option value="$PROJECT_DIR$/public/script/admindashboard-posts.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/admindashboard-users.css" />
         <option value="$PROJECT_DIR$/public/script/admindashboard-users.js" />
-        <option value="$PROJECT_DIR$/views/admindashboard.ejs" />
         <option value="$PROJECT_DIR$/views/admindashboard-posts.ejs" />
+        <option value="$PROJECT_DIR$/views/admindashboard.ejs" />
         <option value="$PROJECT_DIR$/views/admindashboard-users.ejs" />
       </list>
     </option>
@@ -323,7 +319,7 @@
       <workItem from="1546273656072" duration="121000" />
       <workItem from="1546319467241" duration="3623000" />
       <workItem from="1546405275509" duration="3384000" />
-      <workItem from="1546411264019" duration="3231000" />
+      <workItem from="1546411264019" duration="3971000" />
     </task>
     <task id="LOCAL-00001" summary="Obtain sign in with Google">
       <created>1542121237321</created>
@@ -493,11 +489,32 @@
       <option name="project" value="LOCAL" />
       <updated>1546412309302</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Fixing admin pages">
+      <created>1546415694188</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1546415694189</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixing admin pages">
+      <created>1546415846907</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1546415846907</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixing admin pages">
+      <created>1546416127582</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1546416127582</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97177000" />
+    <option name="totallyTimeSpent" value="97917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -775,10 +792,10 @@
     <entry file="file://$PROJECT_DIR$/public/script/admindashboard-posts.js" />
     <entry file="file://$PROJECT_DIR$/public/stylesheets/admindashboard-users.css" />
     <entry file="file://$PROJECT_DIR$/public/script/admindashboard-users.js" />
-    <entry file="file://$PROJECT_DIR$/routes/admindashboard-users.js">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/admindashboard.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="400">
+          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -789,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/admindashboard.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="83" column="24" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/admindashboard-posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -803,24 +813,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admindashboard.ejs">
+    <entry file="file://$PROJECT_DIR$/routes/admindashboard-users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="52" selection-start-line="52" selection-end-line="77" selection-end-column="6" />
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="74" column="513" selection-start-line="74" selection-start-column="513" selection-end-line="74" selection-end-column="513" />
+        <state relative-caret-position="842">
+          <caret line="122" column="14" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admindashboard.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard-users.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="79" column="10" lean-forward="true" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        <state relative-caret-position="471">
+          <caret line="116" column="4" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#2;n#div#2;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
