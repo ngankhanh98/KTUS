@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="" />
+    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -34,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="641">
-              <caret line="128" column="93" lean-forward="true" selection-start-line="128" selection-start-column="93" selection-end-line="128" selection-end-column="93" />
+            <state relative-caret-position="556">
+              <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -294,21 +296,7 @@
       <workItem from="1546319467241" duration="3623000" />
       <workItem from="1546405275509" duration="3384000" />
       <workItem from="1546411264019" duration="10101000" />
-      <workItem from="1546425425997" duration="1316000" />
-    </task>
-    <task id="LOCAL-00003" summary="Modify post image">
-      <created>1542243499885</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1542243499885</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Material-design-icons added">
-      <created>1542250652809</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1542250652810</updated>
+      <workItem from="1546425425997" duration="1913000" />
     </task>
     <task id="LOCAL-00005" summary="Modify header">
       <created>1542250905802</created>
@@ -639,11 +627,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546426724600</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Modifying /admindashboard-posts">
+      <created>1546426946485</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1546426946485</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Modifying /admindashboard-posts">
+      <created>1546427241320</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1546427241320</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105363000" />
+    <option name="totallyTimeSpent" value="105960000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -968,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="128" column="93" lean-forward="true" selection-start-line="128" selection-start-column="93" selection-end-line="128" selection-end-column="93" />
+        <state relative-caret-position="556">
+          <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
         </state>
       </provider>
     </entry>
