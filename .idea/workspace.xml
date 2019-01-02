@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admindashboard-posts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard-posts.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -37,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="120" column="87" selection-start-line="120" selection-start-column="87" selection-end-line="120" selection-end-column="87" />
+            <state relative-caret-position="641">
+              <caret line="128" column="93" lean-forward="true" selection-start-line="128" selection-start-column="93" selection-end-line="128" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -297,21 +294,7 @@
       <workItem from="1546319467241" duration="3623000" />
       <workItem from="1546405275509" duration="3384000" />
       <workItem from="1546411264019" duration="10101000" />
-      <workItem from="1546425425997" duration="1054000" />
-    </task>
-    <task id="LOCAL-00001" summary="Obtain sign in with Google">
-      <created>1542121237321</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1542121237321</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Obtain sign in with Google">
-      <created>1542122200163</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1542122200163</updated>
+      <workItem from="1546425425997" duration="1316000" />
     </task>
     <task id="LOCAL-00003" summary="Modify post image">
       <created>1542243499885</created>
@@ -642,11 +625,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546426343035</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Modifying /admindashboard-posts">
+      <created>1546426487735</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1546426487736</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Modifying /admindashboard-posts">
+      <created>1546426724600</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1546426724600</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105101000" />
+    <option name="totallyTimeSpent" value="105363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -971,8 +968,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="120" column="87" selection-start-line="120" selection-start-column="87" selection-end-line="120" selection-end-column="87" />
+        <state relative-caret-position="641">
+          <caret line="128" column="93" lean-forward="true" selection-start-line="128" selection-start-column="93" selection-end-line="128" selection-end-column="93" />
         </state>
       </provider>
     </entry>
