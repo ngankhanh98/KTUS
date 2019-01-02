@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/admindashboard.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -50,10 +48,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admindashboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+            <state relative-caret-position="117">
+              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
               <folding>
                 <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
@@ -321,7 +321,7 @@
       <workItem from="1546273656072" duration="121000" />
       <workItem from="1546319467241" duration="3623000" />
       <workItem from="1546405275509" duration="3384000" />
-      <workItem from="1546411264019" duration="7007000" />
+      <workItem from="1546411264019" duration="7420000" />
     </task>
     <task id="LOCAL-00001" summary="Obtain sign in with Google">
       <created>1542121237321</created>
@@ -568,11 +568,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546419134992</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Fixing admin pages">
+      <created>1546419415321</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1546419415321</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Fixing admin pages">
+      <created>1546419626373</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1546419626373</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100953000" />
+    <option name="totallyTimeSpent" value="101366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -899,10 +913,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        <state relative-caret-position="117">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
             <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#nav#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#main#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
