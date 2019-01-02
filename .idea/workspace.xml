@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a7e7957b-349a-49be-bbda-885573bcd148" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admindashboard-posts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admindashboard-posts.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+            <state relative-caret-position="454">
+              <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -296,21 +297,7 @@
       <workItem from="1546319467241" duration="3623000" />
       <workItem from="1546405275509" duration="3384000" />
       <workItem from="1546411264019" duration="10101000" />
-      <workItem from="1546425425997" duration="1913000" />
-    </task>
-    <task id="LOCAL-00005" summary="Modify header">
-      <created>1542250905802</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1542250905802</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Aside button post">
-      <created>1542256105747</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1542256105747</updated>
+      <workItem from="1546425425997" duration="2454000" />
     </task>
     <task id="LOCAL-00007" summary="Editor added">
       <created>1542296495719</created>
@@ -641,11 +628,25 @@
       <option name="project" value="LOCAL" />
       <updated>1546427241320</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Modifying /admindashboard-posts">
+      <created>1546427472010</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1546427472010</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Modifying /admindashboard-posts">
+      <created>1546427686380</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1546427686380</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105960000" />
+    <option name="totallyTimeSpent" value="106501000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,8 +971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admindashboard-posts.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="123" column="24" lean-forward="true" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+        <state relative-caret-position="454">
+          <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
         </state>
       </provider>
     </entry>
