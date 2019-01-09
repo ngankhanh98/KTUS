@@ -46,9 +46,18 @@
                 </div>
 
                 <div class="col-3  d-flex justify-content-end align-items-center ">
-                    <a class="btn btn-outline-primary sharp" href="/new-post"><span style="font-family:'Segoe UI'">Viết bài</span></a>
-                    <a class="btn btn-link btn-sm" href="/account/signin"><span style="font-family:'Segoe UI'">Đăng nhập</span></a>
-                    <a class="btn btn-link btn-sm" href="/account/signup"><span style="font-family:'Segoe UI'">Đăng ký</span></a>
+                        <% if (isLogin) {%>
+                            <img src=<%=avatar%> style="border-radius:25px;margin-left:10px;margin-right:5px;height:35px;width:35px" />
+                            <span style="font-family:'Segoe UI';text-transform: capitalize;color:#00a4ff"><%=name%></span></a>
+                            <a class="btn btn-link btn-sm" href="/logout"><span
+                              style="font-family:'Segoe UI'">Đăng Xuất</span></a>
+                            
+                            <% } else {%>
+                    
+                              <a class="btn btn-link btn-sm" href="/signin"><span
+                                        style="font-family:'Segoe UI'">Đăng nhập</span></a>
+                              
+                            <% } %>
                 </div>
             </div>
 
@@ -61,7 +70,7 @@
                 <div class ="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link active" href="/dashboard">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                                 Home <span class="sr-only">(current)</span>
                             </a>

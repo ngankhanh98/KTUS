@@ -8,6 +8,7 @@
   <link rel="icon" href="/images/logo.ico">
 
   <title>KTUS</title>
+  
 
   <!-- Bootstrap core CSS -->
 
@@ -32,18 +33,13 @@
   <header class="blog-header py-1 bg-white">
     <div class="row flex-nowrap justify-content-between align-items-center">
       <div class="col-sm pt-1">
-        <a class="text-muted" href="#">
+        <a class="text-muted" href="/">
           <img src="/images/logo_medium.png"/>
         </a>
       </div>
       <div class="col-5 input-group">
-        <input type="search" class="form-control" aria-label="" placeholder="Search Title" id="seachtitle">
-        <div class="input-group-append">
-          <button type="button" onclick="search()">
-             search
-          </button> 
-        
-        </div>
+          <input type="input" class="form-control" aria-label="" id="searchtitle"/>
+            <button type="button" onclick="search()">Search</button>
       </div>
 
       <div class="col-3  d-flex justify-content-end align-items-center ">
@@ -68,15 +64,15 @@
 
     <div class="sticky-top nav-scroller py-1 mb-2 ">
       <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" href="#">KỸ NĂNG</a>
-        <a class="p-2 text-muted" href="#">KHOA HỌC - CÔNG NGHỆ</a>
-        <a class="p-2 text-muted" href="#">TRUYỀN CẢM HỨNG</a>
-        <a class="p-2 text-muted" href="#">PHIM ẢNH</a>
-        <a class="p-2 text-muted" href="#">ÂM NHẠC</a>
-        <a class="p-2 text-muted" href="#">VĂN HÓA</a>
-        <a class="p-2 text-muted" href="#">CHÍNH TRỊ</a>
-        <a class="p-2 text-muted" href="#">QUAN ĐIỂM - TRANH LUẬN</a>
-        <a class="p-2 text-muted" href="#">DU LỊCH</a>
+        <a class="p-2 text-muted" href="/skills">KỸ NĂNG</a>
+        <a class="p-2 text-muted" href="/sciences">KHOA HỌC - CÔNG NGHỆ</a>
+        <a class="p-2 text-muted" href="/inspired">TRUYỀN CẢM HỨNG</a>
+        <a class="p-2 text-muted" href="/movies">PHIM ẢNH</a>
+        <a class="p-2 text-muted" href="/musics">ÂM NHẠC</a>
+        <a class="p-2 text-muted" href="/cultural">VĂN HÓA</a>
+        <a class="p-2 text-muted" href="/politic">CHÍNH TRỊ</a>
+        <a class="p-2 text-muted" href="/discusions">QUAN ĐIỂM - TRANH LUẬN</a>
+        <a class="p-2 text-muted" href="/travels">DU LỊCH</a>
       </nav>
     </div>
 
@@ -86,8 +82,9 @@
   <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
       <!--bai viet host nhat-->
-      <h1><a class="display-4 text-light"> Giấc Mơ Không Bao Giờ Hết</a></h1>
-      <p class="lead my-3">Tôi không ngờ rằng khi tôi lớn tôi lại thấy buồn vì mẹ tôi không còn quyết định cuộc sống của tôi nữa, hoặc chí ít ...</p>
+      <%id[0]="/post/"+id[0]%>
+      <h1><a class="display-4 text-light" href=<%=id[0]%>><%=title[0]%></a></h1>
+     <p class="lead my-3"><%=dicription[0]%>...</p>
       <!--<p class="lead mb-0"><a href="#" class="text-white font-weight-bold"></a></p>-->
     </div>
   </div>
@@ -96,37 +93,87 @@
   <h4 class="pb-3 border-bottom">
     Nổi bật
   </h4>
-  <div class="row sm-2">
-    <div class="col-sm-6">
-      <div class="card flex-md-row mb-4 shadow-sm h-md-200">
-        <div class="card-body d-flex flex-column align-items-start">
-          <strong class="d-inline-block mb-2 text-success" style="text-transform: capitalize"><%=name%></strong>
-          <h3 class="mb-0">
-            <a class="text-dark" href="#">Post title</a>
-          </h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#">Continue reading</a>
-        </div>
-        <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
-      </div>
-    </div>
-    
-    <div class="col-sm-6">
-      <div class="card flex-md-row mb-4 shadow-sm h-md-200">
-        <div class="card-body d-flex flex-column align-items-start">
-          <strong class="d-inline-block mb-2 text-success">Design</strong>
-          <h3 class="mb-0">
-            <a class="text-dark" href="#">Post title</a>
-          </h3>
-          <div class="mb-1 text-muted">Nov 11</div>
-          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-          <a href="#">Continue reading</a>
-        </div>
-        <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
-      </div>
-    </div>
-  </div>
+      <% for(var i=1; i < (id.length); i=i+2) { %>
+      
+        <div class="row sm-2">
+            <div class="col-sm-6">
+        
+              <div class="card flex-md-row mb-4 shadow-sm h-md-200">
+                <div class="card-body d-flex flex-column align-items-start">
+                  <strong class="d-inline-block mb-2 text-success" style="text-transform: capitalize"><%=topic[i]%></strong>
+                  <h3 class="mb-0">
+                    <a class="text-dark" href="#"</a><%=title[i]%></a><!--Post title-->
+                  </h3>
+                  <div class="mb-1 text-muted"><%=time[i]%></div>
+                  <p class="card-text mb-auto"><%=dicription[i]%>...</p>
+                  <%id[i]="/post/"+id[i]%>
+                  <a href=<%=id[i]%>>Continue reading</a>
+                </div>
+                <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
+              </div>
+            </div>
+         <%if ((i+1) < (id.length)) { %>
+            <div class="col-sm-6">
+              <div class="card flex-md-row mb-4 shadow-sm h-md-200">
+                <div class="card-body d-flex flex-column align-items-start">
+                  <strong class="d-inline-block mb-2 text-success"><%=topic[i+1]%></strong>
+                  <h3 class="mb-0">
+                    <a class="text-dark"><%=title[i+1]%></a>
+                  </h3>
+                  <div class="mb-1 text-muted"></div>
+                  <p class="card-text mb-auto"><%=dicription[i+1]%>...</p>
+                  <%id[i+1]="/post/"+id[i+1]%>
+                  <a href=<%= id[i+1]%>>Continue reading</a>
+                </div>
+                <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
+              </div>
+            </div>
+            <%}%>
+          </div>
+      <% } %>    
+      
+  <!--Mới-->
+  <h4 class="pb-3 border-bottom">
+      Mới
+    </h4>
+        <% for(var i=0; i < (nid.length); i=i+2) { %>
+        
+          <div class="row sm-2">
+              <div class="col-sm-6">
+          
+                <div class="card flex-md-row mb-4 shadow-sm h-md-200">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-success" style="text-transform: capitalize"><%=ntopic[i]%></strong>
+                    <h3 class="mb-0">
+                      <a class="text-dark" href="#"><%=ntitle[i]%></a><!--Post title-->
+                    </h3>
+                    <div class="mb-1 text-muted"><%=ntime[i]%></div>
+                    <p class="card-text mb-auto"><%=ndicription[i]%>...</p>
+                    <%nid[i]="/post/"+nid[i]%>
+                    <a href=<%=nid[i]%>>Continue reading</a>
+                  </div>
+                  <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
+                </div>
+              </div>
+           <%if ( (i+1) < nid.length)  { %>
+              <div class="col-sm-6">
+                <div class="card flex-md-row mb-4 shadow-sm h-md-200">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-success"><%=ntopic[i+1]%></strong>
+                    <h3 class="mb-0">
+                      <a class="text-dark"><%=ntitle[i+1]%></a>
+                    </h3>
+                    <div class="mb-1 text-muted"></div>
+                    <p class="card-text mb-auto"><%=ndicription[i+1]%>...</p>
+                    <%nid[i+1]="/post/"+nid[i+1]%>
+                    <a href=<%= nid[i+1]%>>Continue reading</a>
+                  </div>
+                  <a href="#"><img class="card-img-right flex-auto d-none d-lg-block" data-src="holder.js/200x200" alt="Thumbnail [100%x225]" style="height: 230px; width: 200px"src="https://s3-ap-southeast-1.amazonaws.com/img.spiderum.com/sp-thumbnails/23a31340e3d111e8890651ebc1d44625.jpg"></a>
+                </div>
+              </div>
+              <%}%>
+            </div>
+        <% } %>    
 </div>
 </body>
 <footer class="blog-footer">
@@ -138,8 +185,9 @@
 ================================================== -->
 
 
+
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!--<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
@@ -151,30 +199,35 @@
 
 <!--Search function-->
 <script>
-  function search(){
-    $.ajax({
-        url: '/seach/title',
-        type: 'get',
-        cache: false,
-        data: { title:document.getElementById("searchtitle").value},
-        success: function (e) 
-        {
-            if (e.status === -1) {
+    function search()
+    {
+      let data=document.getElementById("searchtitle").value;
+      $.ajax({
+          url: '/search',
+          type: 'post',
+          cache: false,
+          data: { title: data},
+          success: function (e) 
+          {
+              if (e.status === -1) {
+                  
+                alert(e.message);
                 
-              alert(e.message);
-              
-            }
-            else {
-                  if(e.status===0)
-                    alert(e.message)
-                  else
-                    {
-                      alert(e.data);
-                    }
-            }
-        }
-    });
-  }
-</script>
+              }
+              else {
+                    if(e.status===0)
+                      alert(e.message)
+                    else
+                      {
+                        
+                        location.protocol='get';
+                        location.href="/search/"+data;
+                      }
+              }
+          }
+      });
+    };
+    
+  </script>
 </body>
 </html>

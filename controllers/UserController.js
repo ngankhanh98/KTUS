@@ -11,8 +11,13 @@ var UserController={
         req.session.avatar = result.avatar,
         req.session.id_user = result.id_user,
         req.session.isLogin = true;
-        console.log(result);
-        res.redirect('/');
+        req.session.id_role=result.id_role;
+        console.log(req.session.id_role);
+        if(req.session.id_role===1)
+         res.redirect('/dashboard');//admin
+        else
+          res.redirect('/');//user
+         
       }
       else{
         res.render('error',{message:false});

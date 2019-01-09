@@ -8,7 +8,7 @@ var user={
 
        return new Promise((resolve,reject)=>
        {
-          let query=`select id_user,username, avatar,password from user where email='${email}'`;
+          let query=`select * from user where email='${email}'`;
         
           db.query(query,(err,result)=>
           {
@@ -76,6 +76,33 @@ var user={
         
         });
         
+    },
+    // get user list
+    getUser:()=>{
+        return new Promise((resolve,reject)=>
+       {
+          let query=`select id_user,username,avatar,email from user`;
+        
+          db.query(query,(err,result)=>
+          {
+              if(err)
+              {
+                  resolve(-1);
+              }
+              else
+              {
+                  if(result.length>0)
+                  {
+                      resolve(result);
+                  }
+                  else
+                  {
+                      resolve(0);
+                  }
+
+              }
+          })
+       });
     },
 }
 

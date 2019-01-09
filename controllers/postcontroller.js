@@ -42,7 +42,7 @@ var postController={
         });
     },
     searchTitle: async (req,res)=>{
-        let result=await post.searchTitle(req.params.title);
+        let result=await post.searchTitle(req.body.title);
         let tempt;
         if(result===-1)
         {
@@ -65,6 +65,33 @@ var postController={
         res.send(tempt);
 
     },
+    //get search
+    getSearchTitle: async (req,res)=>{
+        let result=await post.getSearchTitle(req.params.title);
+        let id=[],title=[],time=[],tempt,content=[],topic=[];
+
+        for (i=0;i<result.length;i++)
+        {
+            
+            id.push(result[i].id_post);
+            title.push(result[i].title);
+            //covert html to plain text
+            tempt =JSON.stringify(result[i].content).replace(/<\/?[^>]+>/ig, " ");
+            content.push(tempt.slice(1,tempt.indexOf(".")));//  get dicription            
+        };
+        let info={
+            isLogin:req.session.isLogin,
+            name: req.session.name,
+            avatar:req.session.avatar,
+            id:id,
+            title: title,
+            dicription:content
+
+        }
+        res.render('search',info);
+
+    },
+
 
 }
 
